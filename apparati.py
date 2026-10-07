@@ -9,7 +9,7 @@ def aggiungi_apparato(id, nome, bus, stato):
     if id in APPARATI:
         print(f"Errore: L'apparato con ID '{id}' esiste già.")
         return
-    else if stato not in ["OK", "ATTENZIONE", "OFFLINE"]:
+    elif stato not in ["OK", "ATTENZIONE", "OFFLINE"]:
         print(f"Errore: Stato '{stato}' non valido. Deve essere 'OK', 'ATTENZIONE' o 'OFFLINE'.")
         return
     else:
@@ -17,10 +17,12 @@ def aggiungi_apparato(id, nome, bus, stato):
 
 
 def aggiorna_stato(id, nuovo_stato):
+    # Evita l'incompatibvilità delle minuscole
+    nuovo_stato = nuovo_stato.upper()
     if id not in APPARATI:
         print(f"Errore: L'apparato con ID '{id}' non esiste.")
         return
-    else if nuovo_stato not in ["OK", "ATTENZIONE", "OFFLINE"]:
+    elif nuovo_stato not in ["OK", "ATTENZIONE", "OFFLINE"]:
         print(f"Errore: Stato '{nuovo_stato}' non valido. Deve essere 'OK', 'ATTENZIONE' o 'OFFLINE'.")
         return
     else:
