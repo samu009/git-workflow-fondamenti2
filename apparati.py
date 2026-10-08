@@ -13,7 +13,7 @@ def aggiungi_apparato(id, nome, bus, stato):
         print(f"Errore: Stato '{stato}' non valido. Deve essere 'OK', 'ATTENZIONE' o 'OFFLINE'.")
         return
     else:
-        APPARATI[id] = {"nome": nome, "bus": bus, "stato": stato};
+        APPARATI[id] = {"nome": nome, "bus": bus, "stato": stato}
 
 
 def aggiorna_stato(id, nuovo_stato):
@@ -26,8 +26,4 @@ def aggiorna_stato(id, nuovo_stato):
         print(f"Errore: Stato '{nuovo_stato}' non valido. Deve essere 'OK', 'ATTENZIONE' o 'OFFLINE'.")
         return
     else:
-        APPARATI[id]["stato"] = nuovo_stato;
-
-
-
-
+        APPARATI[id]["stato"] = nuovo_stato
