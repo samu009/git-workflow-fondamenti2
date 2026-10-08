@@ -11,3 +11,7 @@ def filtra_per_stato(apparati, stato):
 def filtra_per_bus(apparati, bus):
     lista_filtrata_bus = [s for s in apparati.values() if s["bus"] == bus]
     return lista_filtrata_bus
+
+def filtra_per_nome(apparati, nome):
+    lista_filtrata_nome = [s for s in apparati.values() if s["nome"] == nome]
+    return lista_filtrata_nome
